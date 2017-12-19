@@ -1,0 +1,30 @@
+.Board-create-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+  width: 260px;
+  margin: 30px;
+}
+
+.Board-create-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 250px;
+  border-radius: 2px;
+  background: #CFD8DC;
+}
+
+.Board-create-card:hover {
+  background: #B0BEC5;
+  width: 260px;
+  height: 160px;
+}
+
+.Board-create-card:active {
+  background: #90A4AE;
+  width: 260px;
+  height: 160px;
+}

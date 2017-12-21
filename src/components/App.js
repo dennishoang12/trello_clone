@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Board from './Board/Board.js';
+import { connect } from "react-redux";
 
 class App extends Component {
   render() {

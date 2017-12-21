@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 160px;
   width: 260px;
   margin: 30px;
 }
@@ -27,4 +26,10 @@
   background: #90A4AE;
   width: 260px;
   height: 160px;
+}
+
+.Board-create-card-expanded {
+  background: #CFD8DC;
+  width: 260px;
+  height: 180px;
 }

@@ -1,4 +1,13 @@
 
 .Board-container {
     height: 100%;
+    display: flex;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.delete-me {
+  background: red;
+  width: 10px;
+  height: 10px;
 }

@@ -10,9 +10,9 @@ import { addBoard, toggleCreateBoard, deleteBoard } from './actions';
 
 let store = createStore(boardApp);
 
-// store.subscribe(() => {
-//   console.log("Changed state", store.getState());
-// });
+store.subscribe(() => {
+  console.log("Changed state", store.getState());
+});
 
 // store.dispatch({type: "ADD_BOARD", name:"Doug's Board", id: 0});
 // store.dispatch({type: "TOGGLE_CREATE_BOARD"});

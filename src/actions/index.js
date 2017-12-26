@@ -28,3 +28,9 @@ export const toggleCreateBoard = () => {
     type: "TOGGLE_CREATE_BOARD"
   }
 }
+
+export const toggleHome = () => {
+  return {
+    type: "TOGGLE_HOME"
+  }
+}

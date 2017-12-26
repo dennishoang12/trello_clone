@@ -25,14 +25,16 @@ const mapDispatchToProps = (dispatch) => {
     }
   })
 }
-
 class Boards extends Component {
 
   render() {
       const board = this.props.boards.map(x =>
         <div className="Board-create-container" key={x.id} onClick={() => this.props.onToggleBoard(x.id)}>
           <div className="Board-create-card">
-            <div className="delete-me" onClick={() => this.props.onDeleteBoard(x.id)}></div>
+            <div className="delete-me" onClick={(e) => {
+              this.props.onDeleteBoard(x.id);
+              e.stopPropagation();}}>
+            </div>
             <div className="Board-create-text">{x.name}</div>
           </div>
         </div>
@@ -52,5 +54,6 @@ export default connect(mapStateToProps, mapDispatchToProps)(Boards);
 Boards.propTypes = {
   boards: PropTypes.array.isRequired,
   onDeleteBoard: PropTypes.func.isRequired,
-  onToggle: PropTypes.func.isRequired
+  onToggle: PropTypes.func.isRequired,
+  onToggleBoard: PropTypes.func.isRequired
 }

@@ -58,15 +58,15 @@ class CreateBoard extends Component {
             <div>Create Board</div>
             <form onSubmit={e => {
               e.preventDefault();
-              if (!input.value.trim()) {
+              if (!this.input.value.trim()) {
                 return;
               }
-              this.props.onCreateBoard(input.value);
-              input.value = '';
+              this.props.onCreateBoard(this.input.value);
+              this.input.value = '';
               this.handleClick();
             }}>
-              <input ref={node => {input = node}} className="Board-create-input"></input>
-              <button>Create</button>
+              <input ref={node => {this.input = node}} className="Board-create-input" autoFocus></input>
+
             </form>
           </div>
         </div>

@@ -1,0 +1,17 @@
+.lists-container {
+  width: 100%;
+  padding-top: 50px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-container {
+  margin: 20px;
+  width: 200px;
+  border: 1px solid black;
+}
+
+.input-box {
+  width: 100%;
+}

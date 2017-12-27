@@ -15,3 +15,9 @@
 .input-box {
   width: 100%;
 }
+
+.lists-create-container {
+  margin: 20px;
+  width: 200px;
+  border: 1px solid black;
+}

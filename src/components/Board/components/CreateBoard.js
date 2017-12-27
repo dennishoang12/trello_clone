@@ -49,7 +49,6 @@ class CreateBoard extends Component {
   }
 
   render() {
-    let input;
 
     if (this.props.isToggled) {
       return (

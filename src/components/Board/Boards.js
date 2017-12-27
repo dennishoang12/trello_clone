@@ -29,11 +29,13 @@ class Boards extends Component {
 
   render() {
       const board = this.props.boards.map(x =>
-        <div className="Board-create-container" key={x.id} onClick={() => this.props.onToggleBoard(x.id)}>
+        <div className="Board-create-container" key={x.id} onClick={() => {
+          this.props.onToggleBoard(x.id);
+        }}>
           <div className="Board-create-card">
             <div className="delete-me" onClick={(e) => {
               this.props.onDeleteBoard(x.id);
-              e.stopPropagation();}}>
+              e.stopPropagation();}}>X
             </div>
             <div className="Board-create-text">{x.name}</div>
           </div>

@@ -7,34 +7,69 @@
   height: 180px;
 }
 
+.Board-create-container:last-child {
+  justify-content: flex-start;
+}
+
 .Board-create-card {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
-  height: 150px;
-  width: 250px;
+  width: 260px;
+  height: 160px;
   border-radius: 2px;
-  background: #CFD8DC;
+  background: rgb(0, 121, 191);
 }
 
 .Board-create-card:hover {
-  background: #B0BEC5;
   width: 260px;
   height: 160px;
-}
-
-.Board-create-card:active {
-  background: #90A4AE;
-  width: 260px;
-  height: 160px;
+  background: #026aa7;
 }
 
 .Board-create-card-expanded {
   background: #CFD8DC;
   width: 260px;
-  height: 180px;
+  height: 100px;
+  padding: 10px;
 }
 
 .Board-create-input {
   width: 80%;
+  margin-top: 10px;
+}
+
+.Board-create-text-button {
+  font-weight: 300;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+
+.Board-create-text {
+  font-weight: 300;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+}
+
+.Board-create-button {
+  width: 65px;
+  height: 65px;
+  padding-bottom: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 121, 191);
+  border-radius: 100%;
+}
+
+.Board-create-button:hover {
+  background: #026aa7;
+}
+
+.Board-create-title {
+  font-size: 18px;
+  font-weight: 300;
 }

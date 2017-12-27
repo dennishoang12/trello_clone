@@ -24,20 +24,22 @@ class App extends Component {
   render() {
 
     var body = <Boards />;
+    var title = <h1 className="App-title">Trello</h1>
 
     if (this.props.board_id !== -1) {
       body = (
         <div className="List-container">
-          <div onClick={this.props.onToggleHome}>Get me out!</div>
           <Lists />
         </div>
       );
+
+      title = <h1 className="App-title" onClick={this.props.onToggleHome}>Trello</h1>
     }
 
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Trello</h1>
+          {title}
         </header>
         { body }
       </div>

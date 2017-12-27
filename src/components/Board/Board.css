@@ -7,7 +7,10 @@
 }
 
 .delete-me {
-  background: red;
-  width: 10px;
-  height: 10px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: white;
+  width: 15px;
+  height: 15px;
 }

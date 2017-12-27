@@ -42,9 +42,16 @@ class CreateBoard extends Component {
   }
 
   handleOutsideClick(e) {
+
+    if (this.node === null) {
+      this.handleClick();
+      return;
+    }
+
     if (this.node.contains(e.target)) {
       return;
     }
+
     this.handleClick();
   }
 
@@ -54,7 +61,7 @@ class CreateBoard extends Component {
       return (
         <div className="Board-create-container" ref={node => {this.node = node}}>
           <div className="Board-create-card-expanded">
-            <div>Create Board</div>
+            <div className="Board-create-title">Create Board</div>
             <form onSubmit={e => {
               e.preventDefault();
               if (!this.input.value.trim()) {
@@ -74,8 +81,8 @@ class CreateBoard extends Component {
     else {
       return (
         <div className="Board-create-container" ref={node => {this.node = node}}>
-          <div className="Board-create-card" onClick={this.handleClick}>
-            <div className="Board-create-text">Create Board...</div>
+          <div className="Board-create-button" onClick={this.handleClick}>
+            <div className="Board-create-text-button">+</div>
           </div>
         </div>
       );

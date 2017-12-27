@@ -1,7 +1,7 @@
 .lists-container {
   width: 100%;
   padding-top: 50px;
-  justify-content: center;
+  padding-left: 70px;
   display: flex;
   flex-wrap: wrap;
 }

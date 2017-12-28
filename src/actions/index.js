@@ -1,5 +1,6 @@
 let listId = 0;
 let nextBoardId = 0;
+let activityId = 0;
 
 export const addBoard = name => {
   return {
@@ -56,6 +57,15 @@ export const addActivity = (list_id, text) => {
   return {
     type: "ADD_ACTIVITY",
     list_id,
-    text
+    text,
+    activity_id: activityId++
+  }
+}
+
+export const toggleActivity = (list_id, activity_id) => {
+  return {
+    type: "TOGGLE_ACTIVITY",
+    list_id,
+    activity_id
   }
 }

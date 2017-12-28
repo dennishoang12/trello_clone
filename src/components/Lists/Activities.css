@@ -1,10 +1,28 @@
 .activity-box {
-  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #CFD8DC;
   border-bottom: none;
   height: 30px;
 }
 
-.activity-box:last-child {
-  border: 1px solid black;
-  border-top: none;
+.activity-box-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #CFD8DC;
+  height: 30px;
+}
+
+.complete {
+  width: 10px;
+  height: 10px;
+  background: green;
+}
+
+.not-complete {
+  width: 10px;
+  height: 10px;
+  background: red;
 }

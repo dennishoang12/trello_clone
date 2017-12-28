@@ -35,9 +35,9 @@ class Lists extends Component {
         <div className="list-title">
         {x.title}
         </div>
-        <Activities activities={x.activities}/>
-        <div className="activity-box">
-          <input onKeyPress={e => {
+        <Activities activities={x.activities} list_id={x.list_id}/>
+        <div className="activity-box-text">
+          <input className="input-box" onKeyPress={e => {
             if (e.key == 'Enter') {
               if (!e.target.value.trim()) {
                 return;
@@ -45,7 +45,7 @@ class Lists extends Component {
               this.props.onAddActivity(x.list_id, e.target.value);
               e.target.value = '';
             }
-          }} className="input-box"></input>
+          }}></input>
         </div>
       </div>)
 
@@ -53,7 +53,7 @@ class Lists extends Component {
       <div className="lists-container">
         {body}
         <div className="lists-create-container">
-            <input onKeyPress={e => {
+            <input className="input-box" onKeyPress={e => {
               if (e.key == 'Enter') {
                 if (!e.target.value.trim()) {
                   return;

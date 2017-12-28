@@ -9,15 +9,24 @@
 .list-container {
   margin: 20px;
   width: 200px;
-  border: 1px solid black;
 }
 
 .input-box {
-  width: 100%;
+  width: 90%;
 }
 
 .lists-create-container {
   margin: 20px;
   width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #CFD8DC;
+  border-radius: 2px;
+}
+
+.list-title {
   border: 1px solid black;
+  border-bottom: none;
 }

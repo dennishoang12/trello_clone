@@ -32,26 +32,27 @@ class Lists extends Component {
 
     const body = list.map(x =>
       <div className="list-container">
-        <h2>
+        <div className="list-title">
         {x.title}
-        </h2>
+        </div>
         <Activities activities={x.activities}/>
-        <input onKeyPress={e => {
-          if (e.key == 'Enter') {
-            if (!e.target.value.trim()) {
-              return;
+        <div className="activity-box">
+          <input onKeyPress={e => {
+            if (e.key == 'Enter') {
+              if (!e.target.value.trim()) {
+                return;
+              }
+              this.props.onAddActivity(x.list_id, e.target.value);
+              e.target.value = '';
             }
-            this.props.onAddActivity(x.list_id, e.target.value);
-            e.target.value = '';
-          }
-        }} className="input-box"></input>
+          }} className="input-box"></input>
+        </div>
       </div>)
 
     return (
       <div className="lists-container">
         {body}
         <div className="lists-create-container">
-            <h2>Create new list</h2>
             <input onKeyPress={e => {
               if (e.key == 'Enter') {
                 if (!e.target.value.trim()) {
@@ -60,7 +61,7 @@ class Lists extends Component {
                 this.props.onCreateList(this.props.board_id, e.target.value);
                 e.target.value = '';
               }
-            }}>
+            }} placeholder="Add a list...">
             </input>
         </div>
       </div>

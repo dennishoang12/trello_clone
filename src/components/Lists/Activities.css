@@ -1,4 +1,10 @@
 .activity-box {
-  border-top: 1px solid black;
+  border: 1px solid black;
+  border-bottom: none;
   height: 30px;
+}
+
+.activity-box:last-child {
+  border: 1px solid black;
+  border-top: none;
 }
